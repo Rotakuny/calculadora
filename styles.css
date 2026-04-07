@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #e3ae1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    border:  1px solid #000;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 40px;
+    box-shadow: 10px 10px rgb(0, 0, 0, 50%);
+}
+.header{
+    margin: 10px 0;
+}
+.header > h2,p{
+    margin: 10px 0;
+}
+.entradas{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.entradas > input, button{
+    font-size: 18px;
+}
+.entradas >input{
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    border-radius: 7px;
+}
+.btnCalcular{
+    background-color: #f1ba24;
+    font-size: 20px;
+    padding: 11px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    
+}
+.btnCalcular:hover{
+    font-size: 21px;
+    cursor:pointer;
+    background-color: #fbcb46;
+    transition: font-size 0.3s ease;
+}
+.resultados-contenedor{
+    background-color: rgb(249, 249, 249);
+    width: 780px;
+    height: 328px;
+    border-radius: 15px;
+    padding: 15px;
+    border:  1px solid #000;
+    box-shadow: 10px 10px rgb(0, 0, 0, 50%);
+}
+.title-resultados{
+    margin-top: 25px;
+    font-size: 25px;
+}
+.valor{
+    font-weight: bold;
+    color: darkgreen;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.mostrarResultados{
+    width: 100%;
+    height: 80%;
+}
+.btn-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px;
+}
+.operacion{
+    background-color: #f1ba24;;
+    flex-grow: 1;
+    flex: 1 1 150px;
+    padding: 3px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.operacion:hover{
+    cursor:pointer;
+    background-color: #fbcb46;
+    transition: background-color 0.3s ease;
+}
+.btnLimpiar{
+    background-color: #f1ba24;
+    font-size: 15px;
+    padding: 11px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.btnLimpiar:hover{
+    font-size: 21px;
+    cursor:pointer;
+    background-color: #fbcb46;
+    transition: font-size 0.3s ease;
+}

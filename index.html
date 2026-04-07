@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi calculadora (Rony)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="contenedor">
+            <div class="header">
+                <h2>Calculadora</h2>
+                <p>Ingresa numeros en los campos seleccionados</p>
+            </div>
+            <div class="entradas">
+                <input type="number" id="numero1" placeholder="ej. 50">
+                <input type="number" id="numero2" placeholder="ej. 20">
+                <button class="btnCalcular" type="button" onclick="calcularTodo()">Calcular Todo</button>
+                <div class="btn-contenedor">
+                    <button class="operacion" type="button" onclick="suma()">Sumar</button>
+                    <button class="operacion" type="button" onclick="resta()">Resta</button>
+                    <button class="operacion" type="button" onclick="multiplicacion()">Multiplicación</button>
+                    <button class="operacion" type="button" onclick="division()">División</button>
+                </div>
+                <button class="btnLimpiar" type="button" onclick="limpiarCampos()">Limpiar campos</button>
+            </div>
+        </div>
+        <div class="resultados-contenedor">
+                <h3 class="title-resultados">Resultados</h3>
+                <div class="mostrarResultados" id="mostrarResultados">
+                    
+                </div>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
