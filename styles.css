@@ -1,139 +1,143 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
     margin: 0;
-    padding: 0;
-    font-family: verdana;
+    color: #000;
 }
-body{
-    background-color: #e3ae1d;
-}
-.main{
-    width: 100%;
+.ventana{
+    background-color:rgb(0, 0, 48);
+    width: 100vw;
     height: 100vh;
-    background-color: #e3ae1d;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-
 }
 .contenedor{
-    flex-grow: 0;
-    border:  1px solid #000;
     background-color: #fff;
-    padding: 25px;
-    border-radius: 15px;
+    width: 70%;
+    color: #000;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    box-shadow: 10px 10px rgb(0, 0, 0, 50%);
-    margin: 50px;
-}
-.resultados-contenedor{
-    flex-grow: 1;
-    flex: 1 1 500px;
-    background-color: rgb(249, 249, 249);
-    width: 780px;
-    height: 328px;
     border-radius: 15px;
-    padding: 15px;
-    border:  1px solid #000;
-    box-shadow: 10px 10px rgb(0, 0, 0, 50%);
-    margin: 50px;
-
+    /* flex-wrap: wrap; */
+    /* background-color: #563e09; */
+    
 }
-.header{
-    margin: 10px 0;
-}
-.header > h2,p{
-    margin: 10px 0;
-}
-.entradas{
+.ladoIzquierdo{
+    background-color: #40677d;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+}
+@media (min-width:720px) {
+    .contenedor{
+        flex-direction: row;
+        width: 50%;
+    }
+
+    .ladoIzquierdo{
+        width: 40%;
+        border-radius: 15px 0px 0px 15px;
+    }
+
+    .ladoDerecho{
+        width: 60%;
+    }
+}
+.ladoIzquierdo >h2, p{
+    color: #fff;
+}
+.ladoDerecho{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 15px;
-    
+    border-radius: 15px;
+    flex: 1 1 60%;
 }
-.entradas > input, button{
+input{
+    width: 80%;
+    padding: 8px;
     font-size: 18px;
+    border-radius: 7px;
+    border: none;
+    border-bottom: 1px solid rgb(70, 70, 70);
 }
-.entradas >input{
+input:focus{
+    outline: none;
     border: none;
     border-bottom: 1px solid #000;
-    padding: 10px;
-    border-radius: 7px;
-}
-.btnCalcular{
-    background-color: #f1ba24;
     font-size: 20px;
-    padding: 11px;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-weight: bold;
-    
-}
-.btnCalcular:hover{
-    font-size: 21px;
-    cursor:pointer;
-    background-color: #fbcb46;
-    transition: font-size 0.3s ease;
+    transition: border-bottom 0.2s ease;
+    transition: font-size 0.2s ease-in-out;
 }
 
-.title-resultados{
-    margin-top: 25px;
-    font-size: 25px;
+.ladoDerecho>h2{
+    margin: 20px 0px 0px 0px;
+    font-size: 35px;
 }
-.valor{
+.salarioP{
+    color: rgb(67, 92, 16);
     font-weight: bold;
-    color: darkgreen;
-    font-size: 18px;
-    margin-bottom: 15px;
+    margin: 5px 0;
 }
-.mostrarResultados{
+.bonificacionP{
+    color: darkblue;
+}
+.descuentoP{
+    color: darkred;
+}
+.final{
+    color: #563e09;
+}
+.mensaje{
+    color: #000;
+    margin: 0;
+}
+.contResultados{
+    text-align: center;
     width: 100%;
-    height: 80%;
+    height: auto;
+    margin: 15px 0;
 }
-.btn-contenedor{
+.titulo{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin: 4px 0;
+}
+.botones{
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 5px;
+    height: 100px;
+    background-color: aliceblue;
+    width: 80%;
+    gap: 6px;
+    height: 50px;
 }
-.operacion{
-    background-color: #f1ba24;;
-    flex-grow: 1;
-    flex: 1 1 150px;
-    padding: 3px;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 20px;
-    font-weight: bold;
-}
-.operacion:hover{
-    cursor:pointer;
-    background-color: #fbcb46;
-    transition: background-color 0.3s ease;
-}
-.btnLimpiar{
-    background-color: #f1ba24;
-    font-size: 15px;
-    padding: 11px;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-weight: bold;
-}
-.btnLimpiar:hover{
-    font-size: 21px;
-    cursor:pointer;
-    background-color: #fbcb46;
-    transition: font-size 0.3s ease;
-}
-@media (max-width: 1008px) {
-  .valor {
+button{
+    width: 100%;
+    padding: 4px;
     font-size: 14px;
-  }
+    border-radius: 8px;
+    background-color: #40677d;
+    color: white;
+    height: 100%;
+}
+button:hover{
+    width: 110%;
+    background-color: #4e84a2;
+    transition: width 0.2s ease;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
 }
